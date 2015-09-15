@@ -66,8 +66,7 @@ public class CarTest
     {
         Car car=new Car(50.0);
         car.addGas(10.0);
-        car.drive(200.0);
-        System.out.println(car.getGasInTank());
+        car.drive(200.0);   
         assertEquals(6.0,car.getGasInTank(),1e-6);
         car.drive(25.0);
         assertEquals(5.5,car.getGasInTank(),1e-6);

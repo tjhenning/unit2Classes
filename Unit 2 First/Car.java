@@ -2,6 +2,7 @@
 /**
  * A simple car. It has fuel efficiency and a gas tank. 
  * It may be 'driven' which depletes the gas in the tank.
+ * Unfortunatly, it doesn't actually go anywhere, so your gas is wasted.
  * 
  * @author Tyler Henning 
  * @version 9/10/15
@@ -13,11 +14,10 @@ public class Car
     /** The amount of fuel in the tank measured in gallons.*/
     private double gasInTank;
     /**
-     * Constructor for objects of class Car that specifies fuel efficincey.
+     * Constructor for objects of class Car that specifies fuel efficiencey.
      */
     public Car(double fuelEfficiency2)
     {
-        // initialise instance variables
         fuelEfficiency = fuelEfficiency2;
         gasInTank = 0;
     }
@@ -32,8 +32,8 @@ public class Car
     public void drive(double distance)
     {
         gasInTank-=distance/fuelEfficiency;
-    }
-
+    }
+
     /**
      *  Returns the amount of gas in the tank in gallons
      *
@@ -53,8 +53,6 @@ public class Car
      */
     public void addGas(double fill)
     {
-        gasInTank+=fill;
-        
+        gasInTank+=fill;        
     }
-
 }
