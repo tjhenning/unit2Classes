@@ -11,7 +11,7 @@ import java.awt.Color;
  * @author Tyler H
  * @version 9/16/15
  */
-public class Target extends JComponent
+public class TargetOld extends JComponent
 {
     /** description of instance variable x (add comment for each instance variable) */
     private int x;
@@ -21,7 +21,7 @@ public class Target extends JComponent
     /**
      * Default constructor for objects of class Target
      */
-    public Target(int x1,int y1,double xmult1, double ymult1)
+    public TargetOld(int x1,int y1,double xmult1, double ymult1)
     {
         // initialise instance variables
         x=x1;
@@ -36,9 +36,9 @@ public class Target extends JComponent
        
         //Point2D.Double r1=new Point2D.Double(50,50);
         Ellipse2D.Double biggest = new Ellipse2D.Double(x+50,y+50,100*xmult,100*ymult);
-        Ellipse2D.Double t2 = new Ellipse2D.Double(x+50+(xmult*12.5),y+50+(ymult*12.5),75*xmult,75*ymult);
-        Ellipse2D.Double t3 = new Ellipse2D.Double(x+50+(xmult*25),y+50+(ymult*25),50*xmult,50*ymult);
-        Ellipse2D.Double t4 = new Ellipse2D.Double(x+50+(xmult*37.5),y+50+(ymult*37.5),25*xmult,25*ymult);
+        Ellipse2D.Double t2 = new Ellipse2D.Double(x+62.5,y+62.5,75*xmult,75*ymult);
+        Ellipse2D.Double t3 = new Ellipse2D.Double(x+75,y+75,50*xmult,50*ymult);
+        Ellipse2D.Double t4 = new Ellipse2D.Double(x+87.5,y+87.5,25*xmult,25*ymult);
         g2.setColor(Color.BLACK);
         g2.draw(biggest);
         g2.fill(biggest);
