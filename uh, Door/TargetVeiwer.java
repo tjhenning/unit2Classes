@@ -30,8 +30,8 @@ public class TargetVeiwer
     public static void main(String... args)
     {
         JFrame frame=new JFrame();
-        frame.setSize(400,500);
-        frame.setTitle("What");
+        frame.setSize(650,600);
+        frame.setTitle("Awesome Targets");
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         
         TargetComponent target=new TargetComponent();
