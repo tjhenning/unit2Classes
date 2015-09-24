@@ -54,7 +54,7 @@ public class HardTarget extends JComponent
        {               
         double xsize = (amount-(counter-1))*xmult/amount;
         double ysize = (amount-(counter-1))*ymult/amount;
-        ring = new Ellipse2D.Double(x+50+(.5*xmult*counter/amount),y+50+(.5*ymult*counter/amount),xsize,ysize);//replace ymult with xmult for trippiness
+        ring = new Ellipse2D.Double(x+50+(.5*xmult*(counter-1)/amount),y+50+(.5*ymult*(counter-1)/amount),xsize,ysize);//replace ymult with xmult for trippiness
         stupid=new String(g2.getColor().toString());
         g2.setColor(Color.BLACK);
         if (g2.getColor().toString().equals(stupid))

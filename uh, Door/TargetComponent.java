@@ -38,6 +38,9 @@ public class TargetComponent extends JComponent
           target13.draw(g2);
           HardTarget target14=new HardTarget(400,400,200,200,25);
           target14.draw(g2);
+          //fullscreen one
+          //HardTarget target15=new HardTarget(-50,-50,getWidth(),getHeight(),25);
+          //target15.draw(g2);
     }
 
 }

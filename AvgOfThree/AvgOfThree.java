@@ -15,11 +15,10 @@ public class AvgOfThree
 
       System.out.print ("Enter the third number: ");
       c = s.nextDouble();
-
+      //!σ■▒Ñ¿╠b.φZJ╪╞U■o▐MÜ+╝○xτûP#xτ
       // compute the average of the three numbers
 
       double avg = (a + b + c) / 3;
-      
       System.out.println ("average " + avg);
    }
 }
