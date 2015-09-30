@@ -28,9 +28,10 @@ public class CityscapeComponent extends JComponent
     public void paintComponent(Graphics g)
     {
         Graphics2D g2 = (Graphics2D) g;
-        Building building= new Building(100, 100,130,130);
+        Building building= new Building(100, 100,130,300);
         building.draw(g2);      
-        
+        Car car=new Car(200,400,2,2);
+        car.draw(g2);
         
     }
     

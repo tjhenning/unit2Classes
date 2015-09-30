@@ -50,21 +50,31 @@ public class Building extends JComponent
         int howMany=(int)(width/30)*(height/60);
         int inRow=(howMany-1)%(width/30);
         inRow++;
+        int rowNum=0;
         int counter=0;
         int trueCounter=0;
         Rectangle window;
         g2.setColor(Color.BLACK);
         g2.fill(mainBuilding);
-        g2.setColor(Color.WHITE);
+        Color color=new Color(204,255,255);
+        g2.setColor(color);
+        
         while (trueCounter<howMany){
-            if (counter>inRow){
-                counter-=inRow;}
-            window = new Rectangle(x+10+(counter*30),y+10,20,40);
-            System.out.println(inRow);
+            if (counter>=inRow){
+                counter-=inRow;
+                rowNum++;
+                if (rowNum==-1+height/60){
+                    rowNum=0;}
+            }
+            window = new Rectangle(x+10+(counter*30),y+10+(rowNum*60),20,40);
+            //System.out.println(inRow);
             counter++;
             trueCounter++;
             g2.fill(window);
-             }        
+             }     
+        window = new Rectangle(x+width/2-20,y+height-60,40,60);
+        g2.setColor(Color.LIGHT_GRAY);
+        g2.fill(window);
         }
     }
 
