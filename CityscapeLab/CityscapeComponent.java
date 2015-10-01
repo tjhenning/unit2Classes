@@ -13,8 +13,8 @@ public class CityscapeComponent extends JComponent
 {
     // define the objects in your Cityscape as instance variables
     // ...
-    
-    
+    Car car=new Car(300,400,2,2);
+    Sun sun=new Sun(getWidth()/2,getHeight()/8,50,50);
     
     // define the CityscapeComponent contructor and intiailize all instance variables
     // ...
@@ -29,10 +29,11 @@ public class CityscapeComponent extends JComponent
     {
         Graphics2D g2 = (Graphics2D) g;
         Building building= new Building(100, 100,130,300);
-        building.draw(g2);      
-        Car car=new Car(200,400,2,2);
+        building.draw(g2);           
         car.draw(g2);
-        
+        Building building2= new Building(400, 200,100,200);
+        building2.draw(g2);  
+        sun.draw(g2);
     }
     
     /**
@@ -43,7 +44,12 @@ public class CityscapeComponent extends JComponent
     {
         // update the objects in the cityscape so they are animated
         // ...
-        
+        int x=car.changeX();
+        if (x<=-20)
+        {
+            x=(int)((double)getWidth()/1.2);
+            car.setX(x);
+        }
         
         
         // request that the Java Runtime repaints this component by invoking its paintComponent method

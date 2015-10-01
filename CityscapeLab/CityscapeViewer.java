@@ -28,7 +28,7 @@ public class CityscapeViewer
         // ...
         
         
-        
+       
         // a frame contains a single component; create the Cityscape component and add it to the frame
         CityscapeComponent component = new CityscapeComponent( /* pass the user-specified value */ );
         frame.add(component);
