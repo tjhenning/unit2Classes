@@ -38,7 +38,7 @@ public class Car
     }
     public int changeX()
     {
-        x-=10;
+        x-=width*7;
         return x;
         
         
@@ -72,7 +72,8 @@ public class Car
         Point2D.Double p7=new Point2D.Double(25*width+x,height+y);
         Point2D.Double p8=new Point2D.Double(25*width+x,10*height+y);
         Point2D.Double p9=new Point2D.Double(25*width+x,height+y);
-        Point2D.Double p10=new Point2D.Double(25*width+x,10*height+y);
+        Point2D.Double p10=new Point2D.Double(45*width+x,height+y);
+        Point2D.Double p11=new Point2D.Double(45*width+x,10*height+y);
         g2.draw(l1);
         g2.draw(l2);
         g2.draw(l3);
@@ -80,11 +81,13 @@ public class Car
         g2.fill(tire1);
         g2.fill(tire2);
         g2.setColor(Color.BLACK);
-        g2.setStroke(new BasicStroke(5));
+        g2.setStroke(new BasicStroke(height*2));
         g2.draw(tire1);
         g2.draw(tire2);        
         Line2D.Double l4=new Line2D.Double(p8,p7);
         g2.draw(l4);
+        Line2D.Double l5=new Line2D.Double(p10,p11);
+        g2.draw(l5);
         g2.setStroke(new BasicStroke(1));
         }
     }
