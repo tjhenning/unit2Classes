@@ -2,6 +2,9 @@ import java.awt.Graphics;
 import java.awt.Graphics2D;
 import javax.swing.JComponent;
 import java.util.Random;
+import java.awt.Rectangle;
+import java.awt.Color;
+
 /**
  * Class that creates instances of the classes that comprise the cityscape and delegates drawing the
  *  cityscape to these object.
@@ -14,9 +17,11 @@ public class CityscapeComponent extends JComponent
     // define the objects in your Cityscape as instance variables
     // ...
     Random rand=new Random();
-    Car car=new Car(300,450,1,1);
+    Car car=new Car(400,500,1,1);
     Sun sun=new Sun();
-    Car car2=new Car(400,500,3,3);
+    Car car2=new Car(300,410,3,3);
+    Tree tree1=new Tree(500,400,35,35);
+    Tree tree2=new Tree(250,400,35,35);
     //Building b1=new Building(rand.nextInt)
     // define the CityscapeComponent contructor and intiailize all instance variables
     // ...
@@ -30,15 +35,20 @@ public class CityscapeComponent extends JComponent
     public void paintComponent(Graphics g)
     {
         Graphics2D g2 = (Graphics2D) g;
+        Rectangle sky= new Rectangle(0,0,getWidth(),getHeight()/2);
+        Color color=new Color(204,255,255);
+        g2.setColor(color);
+        g2.fill(sky);                
         Building building= new Building(100, 100,130,300);
-        building.draw(g2);           
+        building.draw(g2);
         car.draw(g2);
         car2.draw(g2);
         Building building2= new Building(400, 200,100,200);
         building2.draw(g2);  
         sun.SunMaker(getWidth()/2,getHeight()/12,50,50);
-        sun.draw(g2);
-        System.out.println("test");
+        sun.draw(g2);      
+        tree1.draw(g2);
+        tree2.draw(g2);
     }
     
     /**
