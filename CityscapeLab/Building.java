@@ -1,12 +1,10 @@
-
-
-
 import java.awt.Graphics;
 import java.awt.Graphics2D;
 import java.awt.geom.Point2D;
 import javax.swing.JComponent;
 import java.awt.Rectangle;
 import java.awt.Color;
+import java.awt.BasicStroke;
 
 /**
  * Draws an awesome modular target.
@@ -31,7 +29,7 @@ public class Building extends JComponent
     {
         // initialise instance variables
         x=x1;
-        y=y1;
+        y=y1-height1;
         width=width1;
         height=height1;
      
@@ -56,6 +54,10 @@ public class Building extends JComponent
         Rectangle window;
         g2.setColor(Color.BLACK);
         g2.fill(mainBuilding);
+        g2.setStroke(new BasicStroke(2));
+        g2.setColor(Color.DARK_GRAY);
+        g2.draw(mainBuilding);
+        g2.setStroke(new BasicStroke(1));
         Color color=new Color(204,255,255);
         g2.setColor(color);
         
