@@ -14,16 +14,16 @@ import java.awt.BasicStroke;
  */
 public class Building extends JComponent
 {
-    /** X value of top corner of the target */
+    /** X value of top corner of the building */
     private int x;
-    /** Y value of top corner of the target*/
+    /** Y value of top corner of the building*/
     private int y;
-    /** How wide the X axis of the target is*/
+    /** How wide the X axis of the building is*/
     private int height;
-    /** How wide the Y axis of the target is*/
+    /** How wide the Y axis of the building is*/
     private int width;
     /**
-     * Constructer for class Target.
+     * Constructer for class Building.
      */
     public Building(int x1,int y1, int width1, int height1)
     {
@@ -38,7 +38,7 @@ public class Building extends JComponent
     /**
      * Draws a building.
      *
-     * @post    Draws the target on the frame
+     * @post    Draws the building on the frame
      * @param   g2 is Graphics2D object
      */ 
 

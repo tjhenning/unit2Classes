@@ -21,24 +21,23 @@ public class CityscapeViewer
         // create and configure the frame (window) for the program
         JFrame frame = new JFrame();
         
-        frame.setSize(824 /* x */, 642 /* y */);
+        frame.setSize(825, 650);
         frame.setTitle("Cityscape");
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         
         // use the Scanner class to prompt the user for some configurable aspect of the cityscape
-        Scanner s=new Scanner(System.in);
-        System.out.print("What length do you want the first car to be, in # of pixels?");
-        int carWidth=s.nextInt();
-        System.out.print("What height do you want the first car to be, in # of pixels?");
-        int carLength=s.nextInt();
-        System.out.print("What size do you want the sun to be, in # of pixels?");
-        int carSize=s.nextInt();
-        System.out.print("How many buildings do you want there to be?");
+        Scanner s=new Scanner(System.in);        
+        System.out.print("What size do you want the sun to be, in # of pixels? ");
+        int sunSize=s.nextInt();
+        System.out.print("How many buildings do you want there to be? ");
         int buildings=s.nextInt();
-        
-       
+        System.out.print("How many trees do you want there to be? ");
+        int trees=s.nextInt();
+        System.out.print("How long do you want to wait between frames (in seconds)? ");
+        double animationTime=s.nextDouble();
+        animationTime*=1000;
         // a frame contains a single component; create the Cityscape component and add it to the frame
-        CityscapeComponent component = new CityscapeComponent(buildings);
+        CityscapeComponent component = new CityscapeComponent(buildings,sunSize,trees);
         frame.add(component);
         
         // make the frame visible which will result in the paintComponent method being invoked on the
@@ -46,10 +45,10 @@ public class CityscapeViewer
         frame.setVisible(true);
         
         // animate the cityscape
-        for( int seconds = 0; seconds < ANIMATION_TIME_IN_SECONDS; seconds++ )
+        for( int seconds = 0; seconds < ANIMATION_TIME_IN_SECONDS; seconds+=.1 )
         {
             component.nextFrame();
-            Thread.sleep( 1000 );
+            Thread.sleep( (long)animationTime );
         }
         
     }

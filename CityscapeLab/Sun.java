@@ -9,7 +9,7 @@ import java.awt.geom.Line2D;
 import java.awt.BasicStroke;
 
 /**
- * Draws an awesome modular target.
+ * Draws the sun.
  * 
  * @author Tyler H
  * @version 9/16/15
@@ -24,14 +24,19 @@ public class Sun extends JComponent
     private int height;
     /** How wide the Y axis of the target is*/
     private int width;/**
-     * Constructer for class Target.
+     * Constructer for class Sun.
      */
     public Sun()
     {
         // initialise instance variables            
     }
     /**
-     * Constructer for class Target.
+     * 
+     * Sets the variables for the sun.
+     *
+     * @post    Draws the target on the frame
+     * @param   g2 is Graphics2D object
+     
      */
     public void SunMaker(int x1,int y1, int width1, int height1)
     {
